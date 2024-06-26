@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Alquiler de Maquinas"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Seleccione lo que necesita"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv4"
+        android:layout_below="@+id/radioGroup1"
+        android:text="Nombre:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv4"
+        android:layout_below="@+id/tv4"
+        android:layout_marginTop="15dp"
+        android:text="Telefono:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv3"
+        android:layout_alignBottom="@+id/tv3"
+        android:layout_toRightOf="@+id/tv5"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv4"
+        android:layout_alignBottom="@+id/tv4"
+        android:layout_alignRight="@+id/et1"
+        android:ems="10"
+        android:text="0" />
+
+    <EditText
+        android:id="@+id/et3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv5"
+        android:layout_alignBottom="@+id/tv5"
+        android:layout_toRightOf="@+id/tv5"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/et4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv6"
+        android:layout_alignBottom="@+id/tv6"
+        android:layout_alignRight="@+id/et3"
+        android:layout_toRightOf="@+id/tv6"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button1"
+        android:layout_alignBottom="@+id/button1"
+        android:layout_alignRight="@+id/radioGroup1"
+        android:text="$ 0.00"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:onClick="alta"
+        android:text="Altas" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/button4"
+        android:height="15dp"
+        android:maxHeight="17dp"
+        android:onClick="facturar"
+        android:text="Mostrar Factura"
+        android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button2"
+        android:layout_alignBottom="@+id/button2"
+        android:layout_toRightOf="@+id/tv5"
+        android:onClick="consulta"
+        android:text="Consultas" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv2"
+        android:layout_centerHorizontal="true" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="Compresor ($5000/dia)" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sierra Electrica ($3500/dia)" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hormigonera ($6000/dia)" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv5"
+        android:layout_below="@+id/et3"
+        android:layout_marginTop="14dp"
+        android:text="Cantidad de Dias a alquilar:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/et1"
+        android:layout_marginTop="17dp"
+        android:layout_toLeftOf="@+id/tv2"
+        android:text="DNI:"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv6"
+        android:layout_below="@+id/et4"
+        android:onClick="importe"
+        android:text="Importe a Abonar" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/et4"
+        android:layout_below="@+id/button1"
+        android:onClick="limpiar"
+        android:text="Limpiar" />
+
+</RelativeLayout>
